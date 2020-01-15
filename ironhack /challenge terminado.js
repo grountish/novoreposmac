@@ -62,4 +62,4 @@ function command(thePlayer,orders) {
     }
     console.log(thePlayer.path);
 }
-command(player,"uull");
+command(player,"uulllrrrr");
