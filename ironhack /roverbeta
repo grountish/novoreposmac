@@ -1,5 +1,5 @@
 var roover = {
-    position: [1,1],
+    position: [0,0],
     direction: "N",
     travelLog: []
   };
@@ -49,7 +49,7 @@ function turnRight(roover){
 }
   
 function moveForward(roover){
-    if(position[0] >= 1 && position[0] <= 9 && position[1] >= 1 && position[1] <= 9){
+    if(position[0] > -5 && position[0] < 5 && position[1] > -5 && position[1] < 5){
     switch (direction) {
         case "N":
             position[1]++; 
@@ -71,7 +71,7 @@ function moveForward(roover){
 }
 }
 function moveBackward(roover){
-    if(position[0] >= 1 && position[0] <= 9 && position[1] >= 1 && position[1] <= 9){
+    if(position[0] > -5 && position[0] < 5 && position[1] > -5 && position[1] < 5){
         
     switch (direction) {
         case "N":
@@ -96,7 +96,6 @@ function moveBackward(roover){
 function command(roover,orders) {
     for (let i = 0; i < orders.length; i++) {
         let order = orders[i];
-        
         if  (order !== "l" && order !== "f" && order !== "r" && order !== "b" ) {
             //console.log;
             return ("Provide correct commands!");
@@ -117,14 +116,17 @@ function command(roover,orders) {
                 break;
         }
         
-
-        
     }
-
+}
+  //  console.log(`the roover position is: ${position} and its direction is: ${direction}`);
+   
 console.log(`roover has position x=${position[0]}, y=${position[1]}`);
-travel.push(i-- + " the path is: " + position + " \n " );
+let newPosition = {x: position[0], y: position[1]};
+travel.push(newPosition);
+for (let i = 0; i < travel.length; i++) {
+console.log(travel[0], travel[1]);  
+
 
 }
-console.log(travel); 
 
 }
