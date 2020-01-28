@@ -34,6 +34,15 @@ function calculator(num1,num2,operator) {
 console.log(calculator(2,5,"/")); 
 /*_________________________________*/
 
+
+function myFunction() {
+  setInterval(function(){var things = ['Rock', 'Paper', 'Scissor'];
+var thing = things[Math.floor(Math.random()*things.length)];
+document.getElementById(''); }, 3000);
+}
+
+
+
 const prices = [523, 7.99, 9.99, 20.99, -21];
 
 let ironCities = ["Amsterdam", "Barcelona", "Berlin", "Lisbon",

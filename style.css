@@ -12,6 +12,7 @@ html, body {
 .nav-bar{
     background-color: rgb(25, 33, 41);
     padding: 14px 0px;
+    transition: transform 0.6s ease-in-out;
     
 }
 .nav-bar-ul{
@@ -249,4 +250,10 @@ footer h5{
     height: 375px;
     width: 60%;
     margin: 10px;
+}
+#structurelink {
+    transition: width 1s;
+}  
+#structurelink:hover {
+    transform: width 30px;
 }
